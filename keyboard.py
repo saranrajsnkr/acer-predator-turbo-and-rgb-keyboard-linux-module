@@ -201,6 +201,7 @@ def mode():
     print("5. Shifting")
     print("6. Zoom")
     print("7. Re-Run the Last Command")
+    print("8. Software Modes (Custom Effects) ✦")
     print("0. Exit")
     try:
         choice = int(input("Enter your choice: "))
@@ -242,6 +243,11 @@ def mode():
         elif choice == 7:
             os.system("clear")
             rerun()
+        elif choice == 8:
+            os.system("clear")
+            from software_modes import interactive_menu as sw_menu
+            sw_menu()
+            exit()
         elif choice == 0:
             os.system("clear")
             exit()
